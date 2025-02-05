@@ -10,3 +10,5 @@ class Solution:
                 count[ord(c) - ord("a")] += 1
             ans[tuple(count)].append(s)
         return ans.values()
+    
+#### Other solution is easy where we sort the string and use it as key in dictionary
