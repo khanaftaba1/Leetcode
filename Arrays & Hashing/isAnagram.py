@@ -40,3 +40,15 @@ class Solution:
 #                 return False
 
 #         return True
+
+##### other solution super inefficient bcoz t makes new string everytime
+
+        # if len(s) != len(t):
+        #     return False
+
+        # for i in range(len(s)):
+        #     if s[i] not in t:
+        #         return False
+        #     t = t.replace(s[i],"",1)
+
+        # return True
