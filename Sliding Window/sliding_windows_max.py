@@ -1,8 +1,29 @@
 
+############# Always remember Deque is used to store the index of the elements in the array and its in decreasing order ############
 
+class Solution:
+    def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
+        res = []
+        q = deque()
+        l = r = 0
 
+        while r < len(nums):
 
+            while q and nums[r] > nums[q[-1]]:
+                q.pop()
 
+            q.append(r)
+
+            if l > q[0]:
+                q.popleft()
+
+            if r+1 >= k:
+                res.append(nums[q[0]])
+                l+=1
+
+            r+=1
+
+        return res
 
 
 ############# other solution ################
